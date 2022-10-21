@@ -6,12 +6,15 @@
   "scripts": {
     "start": "cross-env NODE_ENV=production npx babel-node ./src/index.js",
     "start:dev": "nodemon --exec ./node_modules/.bin/babel-node ./src/index.js",
-    "test": "nyc mocha --require @babel/register 'test/**test.js' --exit",
+
     "codecov": "nyc report --reporter=text-lcov > coverage.lcov && codecov",
     "coveralls": "nyc --reporter=lcov --reporter=text-lcov npm test | coveralls",
+    "test": "nyc mocha --require @babel/register 'test/**/**test.js' --timeout 500000 --exit",
+
     "createtables": "cross-env npx sequelize db:migrate",
     "inserttables": "cross-env npx sequelize db:seed:all",
     "deletetables": "cross-env npx sequelize db:migrate:undo:all",
+
     "insertOnetable": "cross-env npx sequelize db:seed --seed 20221310-demo-movie.js",
     "createOnetable": "cross-env npx sequelize-cli db:migrate --to 20221310-create-movie.js",
     "deleteOnetable": "cross-env npx sequelize db:migrate:undo --name 20221310-create-movie.js"
