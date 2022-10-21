@@ -1,0 +1,15 @@
+PORT=3000
+NODE_ENV=production
+
+DATABASE_PRO=database_name
+DATABASE_PORT_PRO=database_port
+DATABASE_HOST_PRO=database_hostname
+DATABASE_USERNAME_PRO=database_username
+DATABASE_PASSWORD_PRO=database_password
+
+DATABASE_STG=montech
+DATABASE_PORT_STG=5432
+DATABASE_HOST_STG=localhost
+DATABASE_USERNAME_STG=postgres
+DATABASE_PASSWORD_STG=Qwerty@123
+DATABASE_URL_STG=postgres://postgres:Qwerty@123@localhost:5432/montech

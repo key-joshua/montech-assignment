@@ -1,0 +1,11 @@
+version: '3.4'
+
+services:
+  montech-assignment-container:
+    image: montech-assignment-image
+    container_name: montech-assignment-container
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "3000:80"

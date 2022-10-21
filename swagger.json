@@ -1,0 +1,164 @@
+
+{
+  "swagger": "2.0",
+  "info": {
+    "description": "Assignment for creating a movies server application with Node.js.",
+    "version": "1.0.0",
+    "title": "BACKEND ASSIGNMENT",
+    "termsOfService": "https://github.com/key-joshua/montech-assignment/tree/develop/README.md ",
+    "contact": { "email": "k.joshua855@gmail.com" }
+  },
+
+  "host": "localhost:3000",
+  "hostPRO": "heritage-backend-app.herokuapp.com",
+  "basePath": "/api/v1",
+  "tags": [
+    {
+      "name": "Initial Route",
+      "description": "Initial/Fake Endpoint | GET Route"
+    },
+    {
+      "name": "Movie Routes",
+      "description": "Movie endpoitns | GET ROUTE, POST ROUTE, DELETE ROUTE, PATCH ROUTE"
+    }
+  ],
+  
+  "schemes": ["http"],
+  "consumes": ["application/json", "none"],
+  "produces": [ "application/json", "none"],
+  "paths": {
+
+    "/kslowpamf": {
+      "get": {
+        "tags": [ "Initial Route"],
+        "summary": " (Handle Intial/Fake GET Route)",
+        "description": "By the use of initial/fake GET endpoint, you will be able to see welcome message ( Welcome To Heritage Apps )",
+        "responses": { "200": { "description": "Success. ( Welcome to Welcome To Heritage Apps )" }, "404": { "description": "Not Found." }}
+      }
+    },
+
+    "/movies/add-movie": {
+      "post": {
+        "tags": [ "Movie Routes"],
+        "summary": " (Add Movie With POST Route)",
+        "description": "By the use of this POST endpoint, you will be able to add a new movie in our database",
+        "responses": { "201": { "description": "CREATED." }, "400": { "description": "BAD_REQUEST." }},
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "required": true,
+            "description": "Body Request",
+            "schema": { "$ref": "#/definitions/AddMovie" }
+          }
+        ]
+      }
+    },
+    
+    "/movies/view-movies": {
+      "get": {
+        "tags": [ "Movie Routes"],
+        "summary": " (View All Movies With GET Route)",
+        "description": "By the use of this GET endpoint, you will be able to view all the movies",
+        "responses": { "200": { "description": "OK." }, "400": { "description": "BAD_REQUEST." }},
+        "parameters": [
+          {
+            "in": "query",
+            "name": "page",
+            "type": "integer",
+            "description":"parsing a page number."
+          },
+          {
+            "in": "query",
+            "name": "limit",
+            "type": "integer",
+            "description":"parsing a limit number."
+          }
+        ]
+      }
+    },
+    
+    "/movies/view-movie/{id}": {
+      "get": {
+        "tags": [ "Movie Routes"],
+        "summary": " (View a Movie With GET Route)",
+        "description": "By the use of this GET endpoint, you will be able to view a single movie",
+        "responses": { "200": { "description": "OK." }, "400": { "description": "BAD_REQUEST." }},
+        "parameters": [
+          { 
+            "in":"path",
+            "name": "id",
+            "type": "integer",
+            "required": true,  
+            "description":"parsing a movie id such as '1' or '2', etc..."
+          }
+        ]
+      }
+    },
+
+    "/movies/ranking-movie/{id}": {
+      "patch": {
+        "tags": [ "Movie Routes"],
+        "summary": " (Rank Movie With PATCH Route)",
+        "description": "By the use of this PATCH endpoint, you will be able to rank a movie in our database",
+        "responses": { "201": { "description": "OK." }, "400": { "description": "BAD_REQUEST." }},
+        "parameters": [
+          { 
+            "in":"path",
+            "name": "id",
+            "type": "integer",
+            "required": true,  
+            "description":"parsing a movie id such as '1' or '2', etc..."
+          },
+          {
+            "in": "body",
+            "name": "body",
+            "required": true,
+            "description": "Body Request",
+            "schema": { "$ref": "#/definitions/RankMovie" }
+          }
+        ]
+      }
+    },
+    
+    "/movie/delete-movie/{id}": {
+      "delete": {
+        "tags": [ "Movie Routes"],
+        "summary": " (Delete a Movie With GET Route)",
+        "description": "By the use of this DELETE endpoint, you will be able to delete a single movie",
+        "responses": { "200": { "description": "OK." }, "400": { "description": "BAD_REQUEST." }},
+        "parameters": [
+          { 
+            "in":"path",
+            "name": "id",
+            "type": "integer",
+            "required": true,  
+            "description":"parsing a movie id such as '1' or '2', etc..."
+          }
+        ]
+      }
+    }
+  },
+
+  "definitions": {
+    "AddMovie": {
+      "type": "object",
+      "properties": {
+        "name":  { "type": "string", "example": "K.G.F Chapter" },
+        "ranking":  { "type": "number", "example": "10" },
+        "rating":  { "type": "number", "example": "4.7" },
+        "cast":  { "type": "array", "example": [ "Vinay", "Anant"] },
+        "releaseDate":  { "type": "date", "example": "2018-12-21" }
+      }
+    },
+
+    "RankMovie": {
+      "type": "object",
+      "properties": {
+        "ranking":  { "type": "number", "example": "10" }
+      }
+    }
+  }
+}
+
+     
