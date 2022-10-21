@@ -9,7 +9,7 @@
 
     "codecov": "nyc report --reporter=text-lcov > coverage.lcov && codecov",
     "coveralls": "nyc --reporter=lcov --reporter=text-lcov npm test | coveralls",
-    "test": "nyc mocha --require @babel/register 'test/**/**test.js' --timeout 500000 --exit",
+    "test": "nyc mocha --require @babel/register 'test/**test.js' --timeout 500000 --exit",
 
     "createtables": "cross-env npx sequelize db:migrate",
     "inserttables": "cross-env npx sequelize db:seed:all",
