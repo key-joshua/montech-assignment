@@ -1,4 +1,5 @@
 [![Maintainability](https://api.codeclimate.com/v1/badges/d88ca3c046d2632c3a29/maintainability)](https://codeclimate.com/github/key-joshua/montech-assignment/maintainability)
+[![CircleCI](https://dl.circleci.com/status-badge/img/gh/key-joshua/montech-assignment/tree/develop.svg?style=svg)](https://dl.circleci.com/status-badge/redirect/gh/key-joshua/montech-assignment/tree/develop)
 
 # BACKEND CHALLEGE
 - This Backend Challenge
