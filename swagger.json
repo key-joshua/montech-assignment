@@ -9,7 +9,6 @@
     "contact": { "email": "k.joshua855@gmail.com" }
   },
 
-  "hostLOC": "localhost:3000",
   "host": "heritage-backend-app.herokuapp.com",
   "basePath": "/api/v1",
   "tags": [
@@ -23,7 +22,7 @@
     }
   ],
   
-  "schemes": ["http", "https"],
+  "schemes": ["https"],
   "consumes": ["application/json", "none"],
   "produces": [ "application/json", "none"],
   "paths": {

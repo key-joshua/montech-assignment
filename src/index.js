@@ -16,6 +16,6 @@ app.get('**', (req, res) => res.status(200).json({ status: 200, data: 'WELCOME T
 
 dotenv.config();
 const port = process.env.PORT;
-app.listen(port, () => { console.log('Server Started on', port); });
+app.listen(port, () => { console.log('Server Started on ', port); });
 
 export default app;
