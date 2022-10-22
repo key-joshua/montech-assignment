@@ -10,15 +10,8 @@ https://heritage-backend-app.herokuapp.com
 
 #### This is the Hosted link of Swagger Documentation
 Postman: [Swagger Collection APIs](https://heritage-backend-app.herokuapp.com/api/v1/documentation).
-
-#### This is the Hosted link of Postman Documentation
-Postman: [Postman Collection APIs](https://interstellar-desert-862691.postman.co/workspace/My-Workspace~0028d5b2-458b-4efa-8593-0c34605468d0/collection/23512770-c5b1c659-624d-404b-9f50-8fa96e6605ac?action=share&creator=23512770).
-
 #### This is Task description documentation 1
-Task Description 1: [Task Description Documentation 1](https://docs.google.com/document/d/1irDSyhrj_JJ-R_zZ1I6YhlFZfrK6v0uChE7GVJFoeCs/edit?usp=sharing).
-
-#### This is Task description documentation 2
-Task Description 2: [Task Description Documentation 2](https://docs.google.com/document/d/1irDSyhrj_JJ-R_zZ1I6YhlFZfrK6v0uChE7GVJFoeCs/edit#:~:text=https%3A//docs.google.com/document/d/e/2PACX%2D1vTt7_AyRMR13_du6T%2D7Wj0liLvP14ZT034fvdpbyyXH4d2oWdKHSe75A0FrPqqzxGcEllZkqsnxMmmN/pub).
+Task Description 1: [Task Description Documentation 1](https://docs.google.com/document/d/1C0epIDFBL0nh-MK4apGRhjApSV1sK3J0MIkfoqytqz0/edit?usp=sharing).
 
 #### This is the Github Repository link of the backend repo 
 https://github.com/key-joshua/montech-assignment
